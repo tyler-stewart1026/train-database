@@ -6,19 +6,81 @@
     <title>Train Database</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- reset -->
-    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- stylesheet -->
-    <link rel="stylesheet" href="/assets/css/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <link rel="icon" type="image/png" href="assets/train-favicon.png">
 </head>
 
 <body>
 
     <div class="container">
         <div class="jumbotron">
-            <h4>Hello World!</h4>
+            <h1>
+                <img src="assets/train-header.png" alt="Train Icon">
+                Train Schedule
+            </h1>
+        </div>
+        <table class="table">
+            <thead class="thead text-white">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr> -->
+            </tbody>
+        </table>
+        <div class="card">
+            <div class="card-header text-white">
+                Add a Train
+            </div>
+            <div class="card-body">
+                <form>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="trainName">Train name</label>
+                            <input type="text" class="form-control" id="trainName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <input type="text" class="form-control" id="destination" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstTime">First train time</label>
+                            <input type="text" class="form-control" id="firstTime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Frequency">Frequency</label>
+                            <input type="text" class="form-control" id="frequency" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="addBtn">Add Train</button>
+
+                    </form>
+            </div>
         </div>
     </div>
 
@@ -39,7 +101,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <!-- Javascript -->
-    <script src="/assets/javascript/app.js" async defer></script>
+    <script src="assets/javascript/app.js" async defer></script>
 </body>
 
 </html>
